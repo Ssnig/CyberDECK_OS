@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default: Phosphor Green */
+  --color-bg: #030a05;
+  --color-card: #06150b;
+  --color-border: #0a3318;
+  --color-primary: #00ff66;
+  --color-primary-dim: rgba(0, 255, 102, 0.2);
+  --color-secondary: #00b347;
+  --color-text: #c8ffdb;
+  --color-muted: #4e8561;
+  --color-accent: #33ff88;
+  --color-danger: #ff3344;
+  --color-warning: #ffb833;
+  --color-success: #00ff66;
+  --glow-primary: rgba(0, 255, 102, 0.4);
+  --glow-secondary: rgba(0, 179, 71, 0.3);
+  --crt-glow: 0 0 6px rgba(0, 255, 102, 0.7);
+}
+
+[data-theme="amber"] {
+  --color-bg: #0a0600;
+  --color-card: #170e01;
+  --color-border: #3d2300;
+  --color-primary: #ffb000;
+  --color-primary-dim: rgba(255, 176, 0, 0.2);
+  --color-secondary: #cc8c00;
+  --color-text: #ffeacc;
+  --color-muted: #8c6d3d;
+  --color-accent: #ffd166;
+  --color-danger: #ff3838;
+  --color-warning: #ffb000;
+  --color-success: #ffcf40;
+  --glow-primary: rgba(255, 176, 0, 0.4);
+  --glow-secondary: rgba(204, 140, 0, 0.3);
+  --crt-glow: 0 0 6px rgba(255, 176, 0, 0.75);
+}
+
+[data-theme="synthwave"] {
+  --color-bg: #070314;
+  --color-card: #120829;
+  --color-border: #3b1968;
+  --color-primary: #ff007f;
+  --color-primary-dim: rgba(255, 0, 127, 0.2);
+  --color-secondary: #00f0ff;
+  --color-text: #f0e6ff;
+  --color-muted: #7e63a3;
+  --color-accent: #00f0ff;
+  --color-danger: #ff0055;
+  --color-warning: #ffe600;
+  --color-success: #00ffcc;
+  --glow-primary: rgba(255, 0, 127, 0.45);
+  --glow-secondary: rgba(0, 240, 255, 0.4);
+  --crt-glow: 0 0 8px rgba(255, 0, 127, 0.8);
+}
+
+[data-theme="mica"] {
+  --color-bg: #0b1120;
+  --color-card: #131c31;
+  --color-border: #223254;
+  --color-primary: #38bdf8;
+  --color-primary-dim: rgba(56, 189, 248, 0.2);
+  --color-secondary: #818cf8;
+  --color-text: #e2e8f0;
+  --color-muted: #64748b;
+  --color-accent: #38bdf8;
+  --color-danger: #f43f5e;
+  --color-warning: #fbbf24;
+  --color-success: #34d399;
+  --glow-primary: rgba(56, 189, 248, 0.35);
+  --glow-secondary: rgba(129, 140, 248, 0.3);
+  --crt-glow: 0 0 5px rgba(56, 189, 248, 0.6);
+}
+
+/* CRT Screen Effects */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.4) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+.crt-vignette {
+  background: radial-gradient(
+    circle at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+.glow-text {
+  text-shadow: var(--crt-glow);
+}
+
+.glow-border {
+  box-shadow: 0 0 10px var(--glow-primary);
+}
+
+/* Custom Scrollbar for Terminal and Panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Blinking terminal cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-cursor {
+  animation: blink 1s infinite;
+}
