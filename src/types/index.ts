@@ -1,4 +1,4 @@
-export type Theme = 'phosphor' | 'amber' | 'synthwave' | 'mica';
+export type Theme = 'phosphor' | 'amber' | 'synthwave' | 'mica' | 'void';
 
 export interface VFSNode {
   name: string;

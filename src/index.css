@@ -2,84 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
 :root {
-  /* Default: Phosphor Green */
-  --color-bg: #030a05;
-  --color-card: #06150b;
-  --color-border: #0a3318;
-  --color-primary: #00ff66;
-  --color-primary-dim: rgba(0, 255, 102, 0.2);
-  --color-secondary: #00b347;
-  --color-text: #c8ffdb;
-  --color-muted: #4e8561;
-  --color-accent: #33ff88;
-  --color-danger: #ff3344;
-  --color-warning: #ffb833;
-  --color-success: #00ff66;
-  --glow-primary: rgba(0, 255, 102, 0.4);
-  --glow-secondary: rgba(0, 179, 71, 0.3);
-  --crt-glow: 0 0 6px rgba(0, 255, 102, 0.7);
+  /* Default: Ultra Dark Neon Nexus */
+  --color-bg: #0a0a0f;
+  --color-card: #0f0f1a;
+  --color-border: #1a0f2e;
+  --color-primary: #00ff88;
+  --color-primary-dim: rgba(0, 255, 136, 0.15);
+  --color-secondary: #00cc6b;
+  --color-text: #e0ffff;
+  --color-muted: #4a6d7a;
+  --color-accent: #00ffff;
+  --color-danger: #ff0055;
+  --color-warning: #ffaa00;
+  --color-success: #00ff88;
+  --glow-primary: rgba(0, 255, 136, 0.6);
+  --glow-secondary: rgba(0, 204, 255, 0.5);
+  --crt-glow: 0 0 12px rgba(0, 255, 136, 0.9);
 }
 
 [data-theme="amber"] {
-  --color-bg: #0a0600;
-  --color-card: #170e01;
-  --color-border: #3d2300;
-  --color-primary: #ffb000;
-  --color-primary-dim: rgba(255, 176, 0, 0.2);
-  --color-secondary: #cc8c00;
-  --color-text: #ffeacc;
+  --color-bg: #0b0600;
+  --color-card: #1a0f05;
+  --color-border: #4a2800;
+  --color-primary: #ffbb00;
+  --color-primary-dim: rgba(255, 187, 0, 0.12);
+  --color-secondary: #dd9900;
+  --color-text: #ffead0;
   --color-muted: #8c6d3d;
-  --color-accent: #ffd166;
-  --color-danger: #ff3838;
-  --color-warning: #ffb000;
-  --color-success: #ffcf40;
-  --glow-primary: rgba(255, 176, 0, 0.4);
-  --glow-secondary: rgba(204, 140, 0, 0.3);
-  --crt-glow: 0 0 6px rgba(255, 176, 0, 0.75);
+  --color-accent: #ffdd55;
+  --color-danger: #ff2244;
+  --color-warning: #ffbb00;
+  --color-success: #ffdd55;
+  --glow-primary: rgba(255, 187, 0, 0.7);
+  --glow-secondary: rgba(255, 170, 0, 0.5);
+  --crt-glow: 0 0 14px rgba(255, 187, 0, 1);
 }
 
 [data-theme="synthwave"] {
-  --color-bg: #070314;
-  --color-card: #120829;
-  --color-border: #3b1968;
-  --color-primary: #ff007f;
-  --color-primary-dim: rgba(255, 0, 127, 0.2);
-  --color-secondary: #00f0ff;
-  --color-text: #f0e6ff;
-  --color-muted: #7e63a3;
-  --color-accent: #00f0ff;
-  --color-danger: #ff0055;
-  --color-warning: #ffe600;
-  --color-success: #00ffcc;
-  --glow-primary: rgba(255, 0, 127, 0.45);
-  --glow-secondary: rgba(0, 240, 255, 0.4);
-  --crt-glow: 0 0 8px rgba(255, 0, 127, 0.8);
+  --color-bg: #0a0315;
+  --color-card: #150827;
+  --color-border: #4a1880;
+  --color-primary: #ff006e;
+  --color-primary-dim: rgba(255, 0, 110, 0.12);
+  --color-secondary: #00ffff;
+  --color-text: #f5e6ff;
+  --color-muted: #8a6aa6;
+  --color-accent: #00ffff;
+  --color-danger: #ff0066;
+  --color-warning: #ffcc00;
+  --color-success: #00ffaa;
+  --glow-primary: rgba(255, 0, 110, 0.7);
+  --glow-secondary: rgba(0, 255, 255, 0.6);
+  --crt-glow: 0 0 16px rgba(255, 0, 110, 1);
 }
 
 [data-theme="mica"] {
-  --color-bg: #0b1120;
-  --color-card: #131c31;
-  --color-border: #223254;
-  --color-primary: #38bdf8;
-  --color-primary-dim: rgba(56, 189, 248, 0.2);
-  --color-secondary: #818cf8;
-  --color-text: #e2e8f0;
-  --color-muted: #64748b;
-  --color-accent: #38bdf8;
-  --color-danger: #f43f5e;
-  --color-warning: #fbbf24;
-  --color-success: #34d399;
-  --glow-primary: rgba(56, 189, 248, 0.35);
-  --glow-secondary: rgba(129, 140, 248, 0.3);
-  --crt-glow: 0 0 5px rgba(56, 189, 248, 0.6);
+  --color-bg: #0a0f1f;
+  --color-card: #121a32;
+  --color-border: #2a3a52;
+  --color-primary: #30d9ff;
+  --color-primary-dim: rgba(48, 217, 255, 0.12);
+  --color-secondary: #7c8aff;
+  --color-text: #e0e8ff;
+  --color-muted: #5a6d8a;
+  --color-accent: #30d9ff;
+  --color-danger: #ff2b5e;
+  --color-warning: #ffaa22;
+  --color-success: #22ffaa;
+  --glow-primary: rgba(48, 217, 255, 0.6);
+  --glow-secondary: rgba(124, 138, 255, 0.5);
+  --crt-glow: 0 0 12px rgba(48, 217, 255, 0.9);
+}
+
+[data-theme="void"] {
+  --color-bg: #050508;
+  --color-card: #0d0d15;
+  --color-border: #1a1a2e;
+  --color-primary: #00ff99;
+  --color-primary-dim: rgba(0, 255, 153, 0.1);
+  --color-secondary: #ff0099;
+  --color-text: #e5ffff;
+  --color-muted: #4a6b7f;
+  --color-accent: #ff00ff;
+  --color-danger: #ff0044;
+  --color-warning: #ffff00;
+  --color-success: #00ff99;
+  --glow-primary: rgba(0, 255, 153, 0.8);
+  --glow-secondary: rgba(255, 0, 153, 0.6);
+  --crt-glow: 0 0 18px rgba(0, 255, 153, 1);
 }
 
 /* CRT Screen Effects */
 .crt-scanlines {
   background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 0, 0, 0.4) 50%
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.5) 50%
   );
   background-size: 100% 4px;
   pointer-events: none;
@@ -88,34 +123,45 @@
 .crt-vignette {
   background: radial-gradient(
     circle at center,
-    transparent 60%,
-    rgba(0, 0, 0, 0.75) 100%
+    transparent 50%,
+    rgba(0, 0, 0, 0.85) 100%
   );
   pointer-events: none;
 }
 
 .glow-text {
-  text-shadow: var(--crt-glow);
+  text-shadow: var(--crt-glow),
+               0 0 20px var(--glow-primary),
+               0 0 30px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.1);
 }
 
 .glow-border {
-  box-shadow: 0 0 10px var(--glow-primary);
+  box-shadow: 0 0 15px var(--glow-primary),
+              0 0 30px rgba(0, 0, 0, 0.3),
+              inset 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
 /* Custom Scrollbar for Terminal and Panels */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 1px solid var(--color-border);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border);
-  border-radius: 2px;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+  border-radius: 4px;
+  box-shadow: 0 0 8px var(--glow-primary);
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-secondary);
+  background: linear-gradient(180deg, var(--color-accent), var(--color-primary));
+  box-shadow: 0 0 12px var(--glow-secondary);
 }
 
 /* Blinking terminal cursor animation */

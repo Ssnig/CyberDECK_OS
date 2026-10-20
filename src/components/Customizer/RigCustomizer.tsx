@@ -7,27 +7,33 @@ import { Sliders, Palette, Tv, Volume2, RotateCcw, Check } from 'lucide-react';
 const THEMES: { id: Theme; name: string; desc: string; colors: string[] }[] = [
   {
     id: 'phosphor',
-    name: 'Phosphor Green',
-    desc: 'Classic Matrix green CRT',
-    colors: ['#00ff66', '#030a05'],
+    name: 'Neon Nexus',
+    desc: 'Ultra dark neon green nexus',
+    colors: ['#00ff88', '#0a0a0f'],
   },
   {
     id: 'amber',
-    name: 'Amber CRT',
-    desc: 'Warm 1980s monochrome phosphor',
-    colors: ['#ffb000', '#0a0600'],
+    name: 'Amber Blaze',
+    desc: 'Intense retro amber glow',
+    colors: ['#ffbb00', '#0b0600'],
   },
   {
     id: 'synthwave',
-    name: 'Synthwave Cyber',
-    desc: 'Neon magenta and cyan retrogrid',
-    colors: ['#ff007f', '#00f0ff', '#070314'],
+    name: 'Synthwave Nexus',
+    desc: 'Deep magenta and cyan neon',
+    colors: ['#ff006e', '#00ffff', '#0a0315'],
   },
   {
     id: 'mica',
-    name: 'Win11 Mica Dark',
-    desc: 'Fluent slate with cyber cyan accents',
-    colors: ['#38bdf8', '#0b1120'],
+    name: 'Mica Ice',
+    desc: 'Cyber cyan ice aesthetic',
+    colors: ['#30d9ff', '#0a0f1f'],
+  },
+  {
+    id: 'void',
+    name: 'The Void',
+    desc: 'Darkest neon edge cyberpunk',
+    colors: ['#00ff99', '#ff00ff', '#050508'],
   },
 ];
 
